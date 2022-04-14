@@ -36,3 +36,13 @@
     border-radius: 50%;
     font-size: 20px;
 }
+.addcontactforms{
+    margin: 15px;
+}
+#username,#phone{
+    border-color: #4E426D;
+}
+.contacts .titles{
+    font-weight: bold;
+    font-size: 18px;
+}

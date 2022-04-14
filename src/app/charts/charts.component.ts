@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./charts.component.css']
 })
 export class ChartsComponent implements OnInit {
-
+  displays:any = 'none'
   constructor() { }
 
   ngOnInit(): void {
+  }
+  displayaddcontact(){
+   if(this.displays == "none"){
+    this.displays = "block"
+   }else{
+    this.displays = "none"
+   }
   }
 
 }
