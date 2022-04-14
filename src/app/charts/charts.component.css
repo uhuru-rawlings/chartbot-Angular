@@ -4,8 +4,14 @@
     padding-left: 17px;
     padding-right: 17px;
 }
+.navbar .logo{
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: 2px #FFFFFF;
+}
 .flex_charts .contacts{
     width: 30%;
+    position: relative;
 }
 .flex_charts .chartbody{
     width: 70%;
@@ -45,4 +51,15 @@
 .contacts .titles{
     font-weight: bold;
     font-size: 18px;
+}
+.addcontactforms{
+    position: absolute;
+}
+.chartscontents{
+    background-color: #FFFFFF;
+    height: 87vh;
+    border-radius: 20px;
+}
+.chartbody{
+    margin-left: 20px;
 }
