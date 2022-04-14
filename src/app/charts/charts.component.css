@@ -1,6 +1,38 @@
 .flex_charts{
     display: flex;
+    width: 100%;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.flex_charts .contacts{
+    width: 30%;
+}
+.flex_charts .chartbody{
+    width: 70%;
 }
 #submitbtns{
     background-color: #4E426D;
+}
+#searchcont{
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    padding-left: 20px;
+}
+.chartbody button{
+    height: 50px;
+}
+.chart_actions{
+    width: 100%;
+    text-align: right;
+}
+.addcontact{
+    margin-top: 15px;
+}
+.addcontact button{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 20px;
 }
