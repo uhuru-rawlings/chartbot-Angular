@@ -8,9 +8,9 @@ import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {path:'',component:ChartsComponent},
-  {path:'/login',component:LoginComponent},
-  {path:'/reset',component:ResetComponent},
-  {path:'/account',component:SignupComponent},
+  {path:'login',component:LoginComponent},
+  {path:'reset',component:ResetComponent},
+  {path:'account',component:SignupComponent},
   {path:'**',component:NotFoundComponent}
 ];
 
