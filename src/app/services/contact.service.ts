@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ContactService {
-  url:any = '127.0.0.1:8000/api/addcontact'
+  url:any = 'http://127.0.0.1:8000/api/addcontact'
   constructor(private http:HttpClient) { }
   savecontact(contacdet:any):Observable<any>{
     return this.http.post(this.url, contacdet)
