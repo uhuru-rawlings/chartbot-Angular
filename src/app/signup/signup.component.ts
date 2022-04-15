@@ -16,6 +16,7 @@ export class SignupComponent implements OnInit {
   // login
   phonenumbers:any = ''
   passwords:any = ''
+  response = ''
   constructor(private SignupService:SignupService, private LoginService:LoginService) { }
 
   ngOnInit(): void {
@@ -51,9 +52,11 @@ export class SignupComponent implements OnInit {
         'password':this.passwords
       }
       this.LoginService.loginuser(credentials).subscribe((data) =>{
-        let types = typeof(data)
-        
+        this.response = data
+         console.log(data)
       })
+    }else{
+      this.response = 'Please fill all the required fields.'
     }
   }
 }
