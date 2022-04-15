@@ -1,0 +1,26 @@
+section{
+    width: 30%;
+    margin: auto;
+    color: #FFFFFF;
+}
+.form-control{
+    background-color: inherit;
+    color: #FFFFFF;
+    border-color: #348AF0;
+}
+h3{
+    font-weight: bolder;
+}
+.fullbody{
+    background-image: linear-gradient(to right,rgba(40,42,55,.9),rgba(73,75,90,.7));
+    background-size: 100%, 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.flex_sections{
+    align-items: center;
+    margin-top: 50px;
+}
