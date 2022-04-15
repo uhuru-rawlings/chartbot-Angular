@@ -11,8 +11,23 @@ section{
 h3{
     font-weight: bolder;
 }
+/* .fullbody{
+    background-image: url(../../assets/images/charts.jpg);
+    background-size: 100%, 100%;
+} */
 .flex_sections{
     display: flex;
     align-items: center;
     margin-top: 50px;
+    /* background-image: linear-gradient(to right,rgb(40,42,55),rgb(73,75,90)); */
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+}
+.links a{
+    font-weight: bold;
+    color: #348AF0;
+    text-decoration: none;
 }
