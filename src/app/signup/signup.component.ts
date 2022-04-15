@@ -50,6 +50,10 @@ export class SignupComponent implements OnInit {
         'phonenumber':this.phonenumbers,
         'password':this.passwords
       }
+      this.LoginService.loginuser(credentials).subscribe((data) =>{
+        let types = typeof(data)
+        
+      })
     }
   }
 }
