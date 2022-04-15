@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SignupService } from '../services/signup.service';
 import { LoginService } from '../services/login.service';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -17,7 +19,7 @@ export class SignupComponent implements OnInit {
   phonenumbers:any = ''
   passwords:any = ''
   response = ''
-  constructor(private SignupService:SignupService, private LoginService:LoginService) { }
+  constructor(private SignupService:SignupService, private LoginService:LoginService,private route:Router, private CookieService:CookieService) { }
 
   ngOnInit(): void {
   }
@@ -52,8 +54,17 @@ export class SignupComponent implements OnInit {
         'password':this.passwords
       }
       this.LoginService.loginuser(credentials).subscribe((data) =>{
-        this.response = data
-         console.log(data)
+        try{
+          let token = data.jwt
+          if(token){
+            this.CookieService.set("jwt", token)
+            this.route.navigate(['/'])
+          }
+        }
+        catch{
+          this.response = data
+        }
+         console.log(data.jwt)
       })
     }else{
       this.response = 'Please fill all the required fields.'
