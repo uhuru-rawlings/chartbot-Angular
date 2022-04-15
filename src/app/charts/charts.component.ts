@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from '../services/login.service';
 import { Router } from '@angular/router';
+import { ContactService } from '../services/contact.service';
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
@@ -14,7 +15,7 @@ export class ChartsComponent implements OnInit {
   username:any = ''
   phonenumber:any = ''
   error = ''
-  constructor(private LoginService:LoginService, private CookieService:CookieService, private router:Router) { }
+  constructor(private ContactService:ContactService, private LoginService:LoginService, private CookieService:CookieService, private router:Router) { }
 
   ngOnInit(): void {
     this.getuser()
@@ -46,6 +47,9 @@ export class ChartsComponent implements OnInit {
         'username':this.username,
         'phonenumber':this.phonenumber
       }
+      this.ContactService.savecontact(details).subscribe((data) => {
+        console.log(data)
+      })
     }else{
       this.error = 'please fill the required fields.'
     }
