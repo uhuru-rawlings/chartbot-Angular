@@ -12,6 +12,7 @@ export class ChartsComponent implements OnInit {
   constructor(private LoginService:LoginService, private CookieService:CookieService, private router:Router) { }
 
   ngOnInit(): void {
+    this.getuser()
   }
   displayaddcontact(){
    if(this.displays == "none"){
@@ -23,7 +24,9 @@ export class ChartsComponent implements OnInit {
   getuser(){
      let cookie = this.CookieService.get("jwt")
      if(cookie){
-
+        this.LoginService.getuser(cookie).subscribe((data) =>{
+          console.log(data)
+        } )
      }else{
        this.router.navigate(['/account'])
      }
