@@ -15,6 +15,7 @@ export class ChartsComponent implements OnInit {
   username:any = ''
   phonenumber:any = ''
   error = ''
+  success:any = ''
   constructor(private ContactService:ContactService, private LoginService:LoginService, private CookieService:CookieService, private router:Router) { }
 
   ngOnInit(): void {
@@ -49,6 +50,11 @@ export class ChartsComponent implements OnInit {
       }
       this.ContactService.savecontact(details).subscribe((data) => {
         console.log(data)
+        if(data = 'This contact already added'){
+          this.error = 'This contact already added'
+        }else[
+          this.success = 'contact saved.'
+        ]
       })
     }else{
       this.error = 'please fill the required fields.'
