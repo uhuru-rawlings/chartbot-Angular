@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
 })
 export class ChartsComponent implements OnInit {
   displays:any = 'none'
+  user:any
+  // details contact
+  username:any = ''
+  phonenumber:any = ''
+  error = ''
   constructor(private LoginService:LoginService, private CookieService:CookieService, private router:Router) { }
 
   ngOnInit(): void {
@@ -28,11 +33,21 @@ export class ChartsComponent implements OnInit {
          'jwt':cookie
        }
         this.LoginService.getuser(token).subscribe((data) =>{
-          console.log(data)
+         this.user = data
         } )
      }else{
        this.router.navigate(['/account'])
      }
   }
-
+  savecontact(){
+    if(this.username != '' || this.phonenumber != ''){
+      let details = {
+        'user':this.user,
+        'username':this.username,
+        'phonenumber':this.phonenumber
+      }
+    }else{
+      this.error = 'please fill the required fields.'
+    }
+  }
 }

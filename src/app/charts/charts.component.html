@@ -17,13 +17,14 @@
                 </div>
                 <div class="addcontactforms" [style.display]="displays">
                     <form action="" method="post">
+                        <div class="text-danger text-center">{{ error }}</div>
                         <div class="form-group">
                             <label for="username">Username.</label>
-                            <input type="text" name="username" id="username" autocomplete="off" class="form-control shadow-none" placeholder="Enter name">
+                            <input type="text" name="username" [(ngModel)]="username" autocomplete="off" class="form-control shadow-none" placeholder="Enter name">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number.</label>
-                            <input type="tel" name="phone" id="phone" autocomplete="off" class="form-control shadow-none" placeholder="Enter phone number">
+                            <input type="tel" name="phone" [(ngModel)]="phonenumber" autocomplete="off" class="form-control shadow-none" placeholder="Enter phone number">
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Save Number" class="btn text-light" id="submitbtns">
