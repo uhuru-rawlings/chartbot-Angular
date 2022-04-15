@@ -7,7 +7,7 @@
 .navbar .logo{
     font-size: 20px;
     font-weight: bolder;
-    text-shadow: 2px #FFFFFF;
+    text-shadow: 2px #F5F7FB;
 }
 .flex_charts .contacts{
     width: 30%;
@@ -16,8 +16,10 @@
 .flex_charts .chartbody{
     width: 70%;
 }
+/* 282A37 */
 #submitbtns{
-    background-color: #4E426D;
+    background-color: #F5F7FB;
+    color: #F5F7FB !important;
 }
 #searchcont{
     border: none;
@@ -62,4 +64,8 @@
 }
 .chartbody{
     margin-left: 20px;
+}
+.btn{
+    background-color: #4E426D !important;
+    color: #FFFFFF !important;
 }

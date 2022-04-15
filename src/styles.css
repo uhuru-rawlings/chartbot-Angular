@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
 body{
-    /* background-color: #F5F7FB; */
-    /* background-image: linear-gradient(to right,rgb(40,42,55),rgb(73,75,90)); */
-    background-image: url(assets/images/charts.jpg);
+    background-color: #F5F7FB;
     background-size: 100%, 100%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #4E426D;
+}
+.form-control{
+    border-color:#4E426D !important;
+}
+label{
+    font-weight: bold;
 }

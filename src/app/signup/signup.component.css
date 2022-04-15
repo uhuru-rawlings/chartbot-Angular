@@ -1,18 +1,11 @@
 section{
     width: 30%;
     margin: auto;
-    color: #FFFFFF;
-}
-.form-control{
-    background-color: inherit;
-    color: #FFFFFF;
-    border-color: #348AF0;
 }
 h3{
     font-weight: bolder;
 }
 .fullbody{
-    background-image: linear-gradient(to right,rgba(40,42,55,.9),rgba(73,75,90,.7));
     background-size: 100%, 100%;
     position: absolute;
     top: 0;
@@ -29,4 +22,12 @@ h3{
     font-weight: bold;
     color: #348AF0;
     text-decoration: none;
+}
+.form-control{
+    background-color: inherit;
+}
+.btn{
+    background-color: #4E426D !important;
+    color: #FFFFFF !important;
+    border: none !important;
 }
