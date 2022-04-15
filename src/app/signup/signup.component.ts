@@ -59,12 +59,13 @@ export class SignupComponent implements OnInit {
           if(token){
             this.CookieService.set("jwt", token)
             this.route.navigate(['/'])
+          }else{
+            this.response = data
           }
         }
         catch{
           this.response = data
         }
-         console.log(data.jwt)
       })
     }else{
       this.response = 'Please fill all the required fields.'

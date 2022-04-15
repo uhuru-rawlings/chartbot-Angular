@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CookieService } from 'ngx-cookie-service';
+import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartsComponent implements OnInit {
   displays:any = 'none'
-  constructor() { }
+  constructor(private LoginService:LoginService, private CookieService:CookieService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -17,6 +19,14 @@ export class ChartsComponent implements OnInit {
    }else{
     this.displays = "none"
    }
+  }
+  getuser(){
+     let cookie = this.CookieService.get("jwt")
+     if(cookie){
+
+     }else{
+       this.router.navigate(['/account'])
+     }
   }
 
 }
