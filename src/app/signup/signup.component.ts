@@ -12,6 +12,9 @@ export class SignupComponent implements OnInit {
   password:any = ''
   error:any = ''
   success:any = ''
+  // login
+  phonenumbers:any = ''
+  passwords:any = ''
   constructor(private SignupService:SignupService) { }
 
   ngOnInit(): void {
