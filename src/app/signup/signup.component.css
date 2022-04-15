@@ -1,0 +1,17 @@
+section{
+    width: 30%;
+    margin: auto;
+    color: #FFFFFF;
+}
+.form-control{
+    background-color: inherit;
+    color: #FFFFFF;
+    border-color: #348AF0;
+}
+.signupform h3{
+    font-weight: bolder;
+}
+.flex_sections{
+    display: flex;
+    align-items: center;
+}
