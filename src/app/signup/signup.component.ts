@@ -57,7 +57,9 @@ export class SignupComponent implements OnInit {
         try{
           let token = data.jwt
           if(token){
-            this.CookieService.set("jwt", token)
+            const myDate: Date = new Date();
+            myDate.setHours( myDate.getHours() + 1 );
+            this.CookieService.set("jwt", token,myDate)
             this.route.navigate(['/'])
           }else{
             this.response = data

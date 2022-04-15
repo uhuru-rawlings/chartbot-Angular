@@ -24,7 +24,10 @@ export class ChartsComponent implements OnInit {
   getuser(){
      let cookie = this.CookieService.get("jwt")
      if(cookie){
-        this.LoginService.getuser(cookie).subscribe((data) =>{
+       let token = {
+         'jwt':cookie
+       }
+        this.LoginService.getuser(token).subscribe((data) =>{
           console.log(data)
         } )
      }else{
